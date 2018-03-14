@@ -67,6 +67,7 @@ gulp.task('img', function() {
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 
 	var buildCss = gulp.src([ // Переносим библиотеки в продакшен
+		'app/css/normalize.css',
 		'app/css/owl.carousel.css',
 		'app/css/custom.css',
 		'app/css/media.css'
