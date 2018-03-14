@@ -1,0 +1,77 @@
+body
+	font-family: $fontOpenSans
+	font-size: $fontSizeText
+	line-height: normal
+a 
+  color: #000
+  cursor: pointer
+h2
+	font-family: $fontMontserrat
+	font-weight: $bold
+	font-size: $fontSizeH2
+	color: $titleColor
+	line-height: $lineHeightTitle
+h3
+	font-size: $fontSizeH3
+	font-weight: $bold
+	color: $titleColor
+h4
+	font-size: $fontSizeH4
+	font-weight: $bold
+	color: $titleColor
+h5
+	font-size: $fontSizeH5
+	font-weight: $regular
+	color: $titleColor
+p
+	line-height: $lineHeightText
+	color: $textColor
+img
+	vertical-align: middle
+input,
+textarea,
+select
+	font-family: $fontOpenSans
+	font-size: 14px
+.btn-default
+	display: inline-block
+	min-width: 168px
+	line-height: 44px
+	padding: 0 25px
+	text-align: center
+	font-family: $fontMontserrat
+	font-weight: $regular
+	text-transform: uppercase
+	border-radius: 20px
+	border: none
+	font-size: $fontSizeLink
+	transition: all .3s
+	cursor: pointer
+	&:hover
+		background-color: $hoverColor
+	&_orange
+		background-color: $hoverColor
+		color: $white
+		&:hover
+			background-color: $accentColor
+	&_blue
+		background-color: $accentColor
+		color: $white
+	&_white
+		background-color: $white
+		color: $accentColor
+		&:hover
+			color: $white
+	&_dark
+		background-color: $titleColor
+		color: $white
+.middle-container
+	max-width: 1200px
+	margin-left: auto
+	margin-right: auto
+	padding-left: 15px
+	padding-right: 15px
+.vertical-center
+	display: flex
+	align-items: center
+	justify-content: space-between

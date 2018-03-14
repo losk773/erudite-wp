@@ -1,0 +1,1757 @@
+@import 'variables'
+@import 'base'
+
+.header
+	&-nav
+		border-bottom: 1px solid #ebebeb
+		a
+			color: #606263
+			&:hover
+				color: $accentColor
+		&-inside
+			min-height: 50px
+		&-right
+			display: flex
+			align-items: center
+	&-top
+		position: relative
+		&-menu
+			.nav-toogle-btn
+				display: none
+				font-size: 28px
+				color: $titleColor
+				&:hover
+					color: $accentColor
+.contacts-list 
+	&-link
+		display: inline-block
+		margin-right: 50px
+		font-weight: $semiBold
+		font-size: $fontSizeLink
+		span
+			display: inline-block
+			padding-left: 10px
+			vertical-align: middle
+	&-icon
+		display: inline-block
+		font-size: $fontSizeIcon
+		vertical-align: middle
+.block-social
+	&-item
+		display: inline-block
+		margin-right: -4px
+		a
+			display: block
+			padding: 0 12px
+			&:hover
+				color: $accentColor
+	&-icon
+		font-size: $fontSizeIcon
+.account-block
+	margin-left: 8px
+	&-link
+		display: inline-block
+		font-weight: $semiBold
+		font-size: $fontSizeLink
+		line-height: normal
+		margin-left: -4px
+		&:first-child
+			padding-right: 10px
+			border-right: 1px solid #606263
+		&:last-child
+			padding-left: 10px
+.anmenu
+	&-item
+		position: relative
+		display: inline-block
+		padding: 32px 22px
+		&:last-child
+			padding-right: 0
+		&:hover
+			>.anmenu-link
+				color: $accentColor
+		&:hover
+			.anmenu-sub
+				opacity: 1
+				visibility: visible
+				transform: translateY(0)
+	&-link
+		display: block
+		font-family: $fontMontserrat
+		font-size: $fontSizeLink
+		font-weight: $bold
+		color: $titleColor
+		text-transform: uppercase
+		&.active
+			color: $accentColor
+	&-sub
+		position: absolute
+		top: 100%
+		left: 0
+		transform: translateY(10px)
+		z-index: 10
+		min-width: 180px
+		padding: 20px 30px
+		opacity: 0
+		visibility: hidden
+		border-top: 3px solid $accentColor
+		background-color: $white
+		transition: all .4s
+		&-item
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		&-link
+			color: $textColor
+			&:hover
+				color: $accentColor
+.homeslider
+	position: relative
+	.homeslider-item
+		img
+			width: auto
+	&-item
+		position: relative
+		display: flex
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: #000000
+			opacity: .2
+	&-content
+		position: absolute
+		top: 50%
+		right: 0
+		left: 0
+		transform: translateY(-50%)
+		text-align: center
+	&-title
+		margin-bottom: 45px
+		font-size: 72px
+		line-height: 72px
+		color: $white
+	&-text
+		margin-bottom: 45px
+		font-size: 18px
+		color: $white
+	&-btn
+		margin: 0 12px
+	.owl-next,
+	.owl-prev
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 45px
+		line-height: 40px
+		background-color: rgba(6,6,6,0.55)
+		font-size: 30px
+		color: $white
+		text-align: center
+		transition: all .4s
+		&:hover
+			background-color: rgba(6,6,6, 0.8)
+	.owl-prev
+		left: 20px
+	.owl-next
+		right: 20px
+	.owl-dots
+		position: absolute
+		bottom: 35px
+		left: 0
+		right: 0
+		text-align: center
+		.owl-dot
+			display: inline-block
+			margin: 0 4px
+			&.active,
+			&:hover
+				span
+					opacity: 1
+			span
+				display: block
+				width: 18px
+				height: 4px
+				background-color: $white
+				opacity: .5
+				border-radius: 7px
+.features-section
+	padding: 140px 0
+.welcome
+	margin-bottom: 90px
+	text-align: center
+	&-subtitle
+		display: block
+		margin-bottom: 20px
+		font-weight: $bold
+		font-size: $fontSizeH3
+		color: $accentColor
+		text-transform: capitalize
+	&-title
+		margin-bottom: 35px
+		text-transform: capitalize
+	&-text
+		max-width: 755px
+		margin-left: auto
+		margin-right: auto
+		font-size: $fontSizeAddText
+		font-weight: $regular
+		color: $textColor
+		line-height: $lineHeightAddText
+.features
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	align-items: flex-start
+	&-item
+		width: 33.333333%
+		padding: 0 40px
+		text-align: center
+	&-icon
+		width: 50px
+		height: 50px
+		margin-left: auto
+		margin-right: auto
+		img
+			max-width: 100%
+			height: auto
+	&-content
+		margin-top: 13px
+	&-title
+		margin-bottom: 14px
+		color: $titleColor
+	&-desc
+		padding: 0 30px
+		margin-bottom: 30px
+		font-weight: $regular
+		color: $textColor
+.stats
+	position: relative
+	padding: 94px 0
+	background: url(../img/stats_bg.png) center center no-repeat
+	background-size: cover
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $accentColor
+		opacity: .9
+		z-index: -1
+	&-content
+		position: relative
+		display: flex
+		justify-content: space-between
+.stat-block
+	&-icon
+		width: 52px
+		height: 52px
+		margin-right: 25px
+		margin-top: 5px
+		display: inline-block
+		vertical-align: top
+		text-align: center
+		img
+			max-width: 100%
+			height: auto
+	&-content
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+	&-count
+		display: block
+		font-size: 54px
+		font-weight: $bold
+		line-height: 54px
+		color: $white
+	&-title
+		color: $white
+.popular-courses
+	padding: 130px 0 146px 0
+	&-textcontent
+		margin-bottom: 75px
+		text-align: center
+	&-title
+		@extend .welcome-title
+	&-desc
+		@extend .welcome-text
+.courses
+	&-item
+		max-width: 270px
+	&-item-thumb
+		overflow: hidden
+		a
+			display: block
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				width: 100%
+				height: 100%
+				background-color: $accentColor
+				opacity: 0
+				transition: opacity .4s
+			&:after
+				content: 'Watch Now'
+				position: absolute
+				left: 0
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				text-align: center
+				font-weight: $bold
+				font-size: 16px
+				color: $white
+				opacity: 0
+				transition: opacity .4s
+			&:hover:before
+				opacity: .8
+			&:hover:after
+				opacity: 1
+		img
+			display: block
+			max-width: 100%
+			height: auto
+	&-item-details
+		border: 1px solid #e1e1e1
+		border-top: none
+	&-item-details-inner
+		padding: 15px 20px 18px 20px
+		h4
+			a:hover
+				color: $accentColor
+		span
+			display: block
+			margin-bottom: 13px
+			font-size: $fontSizeText
+			color: #bcbcbc
+	&-item-meta
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 18px 20px
+		border-top: 1px solid #e1e1e1
+		li
+			font-size: 12px
+			line-height: normal
+			color: #bcbcbc
+			i
+				margin-right: 10px
+	&-price
+		display: block
+		min-width: 55px
+		padding: 0 10px
+		line-height: 22px
+		text-align: center
+		color: $white
+		background-color: $hoverColor
+		border-radius: 20px
+		&_free
+			background-color: $accentColor
+.courses-slider
+	.owl-dots
+		text-align: center
+		margin-top: 65px
+		.owl-dot
+			display: inline-block
+			margin: 0 4px
+			&.active,
+			&:hover
+				span
+					opacity: 1
+			span
+				display: block
+				width: 18px
+				height: 4px
+				background-color: #bcbcbc
+				opacity: .5
+				border-radius: 7px
+.events
+	padding: 106px 0
+	background-color: #fafafa
+	&-title
+		@extend .popular-courses-title
+	&-desc
+		@extend .popular-courses-desc
+	&-textcontent
+		@extend .popular-courses-textcontent
+	.events-slider
+		.owl-dots
+			text-align: center
+			margin-top: 65px
+		.owl-dot
+			display: inline-block
+			margin: 0 4px
+			&.active,
+			&:hover
+				span
+					opacity: 1
+			span
+				display: block
+				width: 18px
+				height: 4px
+				background-color: #bcbcbc
+				opacity: .5
+				border-radius: 7px	
+.event
+	position: relative
+	max-width: 364px
+	&:hover 
+		.event-click-details
+			transform: translateY(0)
+	&-thumb
+		a
+			position: relative
+			display: block
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				width: 100%
+				height: 100%
+				background-color: #000000
+				opacity: .2
+	&-info
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		padding: 100px 30px 25px
+		color: $white
+		z-index: 5
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: 100%
+			box-shadow: inset 0px -150px 75px -20px rgba(0,0,0,0.5)
+			z-index: -1
+		h4
+			margin-bottom: 8px
+			line-height: 22px
+			color: $white
+	&-time
+		font-size: 13px
+		i
+			font-size: 16px
+			margin-right: 10px
+	&-date
+		position: absolute
+		top: 20px
+		right: 20px
+		display: block
+		width: 75px
+		height: 75px
+		padding: 7px 0
+		text-align: center
+		border-radius: 50%
+		background-color: $accentColor
+		color: $white
+.event-click
+	&-details
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		transform: translateY(100%)
+		width: 100%
+		height: 100%
+		padding: 55px 30px
+		background-color: #fff
+		z-index: 10
+		transition: transform .5s
+		a
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: 100%
+			z-index: 10
+	&-org
+		display: flex
+		align-items: center
+		margin-bottom: 40px
+		span
+			display: block
+			line-height: normal
+		img
+			max-width: 100%
+			width: auto !important
+			height: auto
+			border-radius: 50%
+		&-info
+			margin-left: 15px
+		&-name
+			color: #bcbcbc
+		&-job
+			font-size: 13px
+			color: $accentColor
+	&-title
+		margin-bottom: 15px
+		line-height: 22px
+	&-time
+		font-size: 13px
+		color: #808080
+		i
+			font-size: 16px
+			margin-right: 10px
+	&-text
+		position: relative
+		margin-top: 15px
+		padding-top: 20px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 45px
+			height: 1px
+			background-color: $textColor
+.date
+	font-weight: $bold
+	&-day
+		font-size: 28px
+		display: block
+	&-month
+		display: block
+		font-size: 14px
+		text-transform: uppercase
+.teachers
+	padding: 135px 0 150px 0
+	&-textcontent
+		@extend .popular-courses-textcontent
+	&-title
+		@extend .popular-courses-title
+	&-desc
+		@extend .popular-courses-desc
+	&-list
+		display: flex
+		justify-content: space-between
+.teacher
+	overflow: hidden
+	position: relative
+	padding-bottom: 90px
+	&:hover
+		.teacher-details
+			bottom: 0
+	&-thumb
+		max-width: 270px
+		img
+			max-width: 100%
+			height: auto
+	&-details
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -53px
+		text-align: center
+		background-color: $white
+		transition: bottom .4s
+	&-inner
+		padding: 23px
+		border: 1px solid #e1e1e1
+		border-top: none
+		h4
+			a:hover
+				color: $accentColor
+		span
+			color: $accentColor
+	&-hover-info
+		height: 53px
+		line-height: 53px
+		background-color: $accentColor
+		transition: all .5s
+	&-social-links
+		li
+			display: inline-block
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+			a
+				color: $white
+				&:hover
+					color: $hoverColor
+.instagram
+	&-box
+		display: flex
+		justify-content: space-around
+	&-item
+		max-width: 240px
+		a
+			position: relative
+			display: block
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				width: 100%
+				height: 100%
+				background-color: #000000
+				opacity: 0
+				transition: opacity .4s
+			&:hover:before
+				opacity: .5
+		img
+			width: 100%
+			height: auto
+.newsletter
+	padding: 90px 0
+	background-color: $accentColor
+	&-inner
+		display: flex
+		align-items: center
+	&-textcontent
+		margin-right: 65px
+	&-textcontent-title,
+	&-textcontent-subtitle
+		color: $white
+	&-textcontent-subtitle
+		font-size: 26px
+		font-weight: $bold
+	&-action
+		flex: 1
+		text-align: right
+	&-subscribe
+		position: relative
+		input
+			width: 100%
+			padding: 10px
+			border: none
+			color: $white
+			border-bottom: 1px solid $white
+			background-color: transparent
+			&::-webkit-input-placeholder
+				color: $white
+				font-size: 14px
+				transition: all .4s
+			&:-moz-placeholder
+				color: $white
+				font-size: 14px
+				transition: all .4s
+			&::-moz-placeholder
+				color: $white
+				font-size: 14px
+				transition: all .4s
+			&:-ms-input-placeholder
+				color: $white
+				font-size: 14px
+				transition: all .4s
+			&:focus
+				outline: none
+				&::-webkit-input-placeholder
+					opacity: 0
+				&:-moz-placeholder
+					opacity: 0
+				&::-moz-placeholder
+					opacity: 0
+				&:-ms-input-placeholder
+					opacity: 0
+		button
+			position: absolute
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+			background-color: transparent
+			border: none
+			color: $white
+			cursor: pointer
+			i
+				font-size: 18px
+.brands
+	padding: 80px 0
+	.brand
+		&-logo
+		&-slider
+			img
+				max-width: 100%
+				width: auto
+				margin-left: auto
+				margin-right: auto
+				filter: grayscale(100%)
+				transform: scale(.95)
+				transition: all .3s
+			a:hover
+				img
+					filter: grayscale(0)
+					transform: scale(1)
+.footer
+	padding-top: 100px
+	background-color: #333333
+	&-row
+		display: flex
+		padding-bottom: 100px
+	&-column
+		width: 25%
+	&-copyright
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 20px 0
+		border-top: 1px solid #484848
+		p
+			color: $white
+			font-size: 14px
+		.block-social
+			li
+				a
+					color: $white
+					&:hover
+						color: $accentColor
+	.about
+		&-title
+			margin-bottom: 20px
+			color: $white
+		&-text
+			max-width: 235px
+			margin-bottom: 35px
+			color: $white
+		&-info
+			color: $white
+			li
+				margin-bottom: 10px
+				i
+					margin-right: 10px
+					font-size: 16px
+	.courses-short
+		padding-left: 40px
+		&-title
+			@extend .about-title
+		&-item
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+		&-subtitle	
+			display: block
+			color: $white
+			&:hover
+				color: $accentColor
+		&-author
+			a
+				color: $accentColor
+	.page-links
+		padding-left: 35px
+		&-title
+			@extend .about-title
+		.link-list
+			&-item
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+				a
+					color: $white
+					&:hover
+						color: $accentColor
+.photogalery-min
+	&-title
+		@extend .about-title
+	&-grid
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		&-item
+			margin-bottom: 7px
+			a
+				position: relative
+				display: block
+				max-width: 93px
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					width: 100%
+					height: 100%
+					background-color: #000
+					opacity: 0
+					transition: all .4s
+				&:hover:before
+					opacity: .3
+				img
+					max-width: 100%
+					height: auto
+.breadcrumbs
+	position: relative
+	z-index: 1
+	padding: 225px 0
+	background-size: cover
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background-color: #000
+		opacity: .2
+		z-index: -1
+	&-title
+		text-align: center
+		h2
+			font-size: $fontSizePageTitle
+			color: $white
+.page-sidebar
+	width: 23.076923%
+	.photogalery-min
+			&-title
+				margin-bottom: 25px
+			&-grid
+				&-item
+					a
+						max-width: 83px
+						img
+							max-width: 100%
+							height: auto
+	.feedback
+			padding: 40px 25px
+			margin-bottom: 45px
+			background-color: $accentColor
+			&-form
+				&-field
+					@extend .newsletter-subscribe
+					margin-bottom: 25px
+					input
+						padding: 15px 5px
+						&:focus
+							outline: none
+				button
+					width: 100%
+					min-width: 168px
+					margin-top: 15px
+					font-weight: $semiBold
+	.courses-aside
+			margin-bottom: 45px
+			&-title
+				margin-bottom: 28px
+			&-list
+				li
+					display: flex
+					align-items: flex-start
+					margin-bottom: 20px
+					h5
+						margin-bottom: 10px
+						a
+							font-weight: $semiBold
+							color: $titleColor
+							&:hover
+								color: $accentColor
+					span
+						&.price-free
+							color: $accentColor
+						&.price
+							color: $hoverColor
+			&-thumb
+				margin-right: 15px
+				a
+					display: block
+					max-width: 90px
+					img
+						max-width: 100%
+						height: auto
+.pagination
+	margin-top: 70px
+	text-align: center
+	&-num
+		display: inline-block
+		min-width: 40px
+		height: 40px
+		line-height: 40px
+		margin-right: 10px
+		padding: 0 18px
+		text-align: center
+		background-color: #fafafa
+		color: $titleColor
+		border: 1px solid #e1e1e1
+		&:hover
+			@extend .current
+		&.current
+			background-color: $accentColor
+			color: $white
+/*------about.html------*/
+#about
+	.breadcrumbs
+		background: url('../img/about_us_bg.jpg') center center no-repeat
+.experience
+	@extend .stats
+	padding: 120px 0
+	&-textcontent
+		@extend .popular-courses-textcontent
+	&-title
+		@extend .popular-courses-title
+		color: $white
+	&-desc-short
+		@extend .popular-courses-desc
+		color: $white
+	&-info
+		display: flex
+		color: $white
+	&-column
+		width: 50%
+	&-description
+		p
+			margin-bottom: 35px
+			color: $white
+	&-list
+		list-style: disc
+		list-style-position: inside
+		&-item
+			margin-bottom: 12px
+			color: $hoverColor
+			&:last-child
+				margin-bottom: 0
+			span
+				color: $white
+	&-stats
+		margin-top: 5px
+		padding-left: 40px 
+		&-item
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+		&-name
+			display: block
+			margin-bottom: 15px
+			font-weight: $bold
+			text-transform: uppercase
+		&-progress
+			position: relative
+			width: 100%
+			height: 6px
+			background-color: #fff
+		&-progress-bar
+			position: absolute
+			height: 100%
+			background-color: $hoverColor
+		&-count
+			position: absolute
+			top: -25px
+			right: -25px
+	&-communication
+		width: 90%
+	&-language
+		width: 60%
+	&-creative
+		width: 70%
+	&-funny
+		width: 50%
+.what-say
+	padding: 120px 0
+	background-color: #fafafa
+	&-row
+		display: flex
+	&-column
+		width: 50%
+	&-video-box
+		position: relative
+		max-width: 540px
+		img
+			max-width: 100%
+			height: auto
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: #000000
+			opacity: .15
+	&-video-btn
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		transform: translateY(-50%)
+		display: inline-block
+		text-align: center
+		img
+			transform: scale(1)
+			transition: transform .4s
+		&:hover
+			img
+				transform: scale(1.15)
+	&-title
+		margin-bottom: 35px
+		font-size: 30px
+		font-weight: $bold
+.panels
+	border: 1px solid #e1e1e1
+	border-bottom: none
+.panel
+	&-head
+		padding: 13px 25px
+		border-bottom: 1px solid #e1e1e1
+	&-title
+		font-size: 16px
+		color: #5c5c5c
+		cursor: pointer
+		user-select: none
+		&:hover
+			color: $accentColor
+	&-body
+		display: none
+		padding: 15px 25px
+		border-bottom: 1px solid #e1e1e1
+.prices-plan
+	padding: 150px 0 200px 0
+	&-textcontent
+		@extend .popular-courses-textcontent
+	&-title
+		@extend .popular-courses-title
+	&-desc
+		@extend .popular-courses-desc	
+.plan
+	&-table
+		display: flex
+		border: 1px solid #e1e1e1
+		&-column
+			border-right: 1px solid #e1e1e1
+			padding-bottom: 40px
+			&:first-child
+				width: 29.9145299%
+				.plan-table-head
+					background-color: transparent
+			&:last-child
+				border-right: none
+		&-head
+			padding: 62px 30px
+			min-height: 218px
+			background-color: #fafafa
+		&-title
+			margin-bottom: 15px
+			color: $titleColor
+		&-price
+			font-size: 38px
+			font-weight: $bold
+			&_st
+				color: $hoverColor
+			&_prof
+				color: $accentColor
+			&_adv
+				color: $titleColor
+		&-list
+			padding: 0 25px
+			margin-bottom: 35px
+			li
+				padding: 15px 10px
+				color: $textColor
+				border-bottom: 1px solid #e1e1e1
+				i.fa-check
+					color: $accentColor
+				span
+					display: none
+					margin-left: 10px
+	&-standart,
+	&-profesional,
+	&-advanced
+		width: 23.36182336%
+		text-align: center
+/*------blog.html------*/
+#blog
+	.breadcrumbs
+		background: url(../img/blog_bg.jpg) top center no-repeat
+		background-size: cover
+.blogs
+	padding: 140px 0
+	&-list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+.blog
+	width: 31.62393162%
+	margin-bottom: 40px
+	&-thumb
+		margin-bottom: 8px
+		img
+			max-width: 100%
+			height: auto
+	&-date
+		margin-top: 20px
+		span
+			color: #bcbcbc
+	&-details
+		h4
+			margin-bottom: 12px
+			a
+				&:hover
+					color: $accentColor
+	&-author
+		margin-top: 25px
+		padding-top: 23px
+		border-top: 1px solid #e1e1e1
+		a
+			display: inline-block
+			max-width: 32px
+			margin-right: 10px
+			border-radius: 50%
+			overflow: hidden
+			vertical-align: middle
+			img
+				max-width: 100%
+				height: auto
+		span
+			color: #bcbcbc
+/*------blog_open.html-----*/
+.blog-single
+	padding: 150px 0
+.post
+	display: flex
+	justify-content: space-between
+	&-header
+		img
+			max-width: 100%
+			height: auto
+	&-main
+		width: 74.3589745%
+	&-details
+		margin-top: 40px
+	&-title
+		margin-bottom: 20px
+		font-size: $fontSizePostTitle
+	&-date-meta
+		padding-left: 5px
+		margin-bottom: 30px
+		color: #bcbcbc
+	&-tags
+		a
+			display: inline-block
+			padding: 2px 10px
+			margin-right: 10px
+
+			font-size: 12px
+			color: $white
+			&:last-child
+				margin-right: 0
+			&:nth-child(odd)
+				background-color: $hoverColor
+			&:nth-child(even)
+			background-color: $accentColor
+	&-date
+		display: inline-block
+		margin-right: 30px
+	&-meta
+		display: inline-block
+		i
+			margin-right: 5px
+		&-likes
+			margin-right: 20px
+		&-commets
+			@extend .post-meta-likes
+	&-content
+		&-text
+			margin-bottom: 15px
+		&-blockquote
+			position: relative
+			margin-top: 80px
+			margin-bottom: 50px
+			padding: 60px 80px 45px 80px
+			text-align: center
+			background-color: #fafafa
+			&:before
+				content: '\f10d'
+				position: absolute
+				top: -30px
+				left: 0
+				right: 0
+				width: 57px
+				height: 57px
+				line-height: 57px
+				margin: auto
+				display: inline-block
+				text-align: center
+				background-color: $accentColor
+				font-family: 'FontAwesome'
+				font-size: 24px
+				color: $white
+				border-radius: 50%
+			&-text
+				font-weight: $bold
+				font-size: $fontSizeAddText
+				line-height: 28px
+				color: $titleColor
+	&-footer
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		align-items: center
+		margin-top: 50px
+		.block-social
+			&-item
+				a
+					color: #606263
+					&:hover
+						color: $accentColor
+			&-icon
+				font-size: 16px
+	&-author
+		&-info
+			width: 100%
+			padding-top: 55px
+			border-top: 1px solid #e1e1e1
+			margin-top: 25px
+			margin-bottom: 80px
+			display: flex
+			align-items: flex-start
+		&-photo
+			flex: 100%
+			max-width: 102px
+			border: 1px solid #e1e1e1
+			border-radius: 50%
+			overflow: hidden
+			img
+				max-width: 100%
+				height: 100%
+		&-details
+			margin-top: 5px
+			margin-left: 20px
+		&-title
+			margin-bottom: 5px
+			a
+				font-weight: $semiBold
+				color: $titleColor
+				&:hover
+					color: $accentColor
+		&-job
+			display: block
+			margin-bottom: 15px
+			font-size: 13px
+			font-weight: $semiBold
+			color: $accentColor
+	.comments
+		&-title
+			margin-bottom: 35px
+		&-children
+			padding-left: 120px
+	.comment
+		padding: 37px 30px
+		margin-bottom: 30px
+		display: flex
+		align-items: flex-start
+		background-color: #fafafa
+		&-author-photo
+			max-width: 90px
+			border-radius: 50%
+			overflow: hidden
+			img
+				max-width: 100%
+				height: auto
+		&-author-name
+			@extend .post-author-title
+		&-body
+			margin-left: 25px
+		&-date
+			color: #bcbcbc
+		&-text
+			margin-bottom: 7px
+		&-reply
+			font-weight: $semiBold
+			color: $accentColor
+			&:hover
+				color: $hoverColor
+		&-respond
+			margin-top: 85px
+			&-title
+				margin-bottom: 50px
+		&-form
+			&-field
+				margin-bottom: 25px
+			input,
+			textarea
+				padding: 14px
+				border: none
+				resize: none
+				width: 100%
+				border-bottom: 1px solid #e1e1e1
+				&:focus
+					outline: none
+			textarea
+				height: 120px
+			button
+				margin-top: 45px
+/*------contact.html-------*/
+#contact
+	.breadcrumbs
+		background: url(../img/contact_bg.jpg) center center no-repeat
+		background-size: cover
+.our-information
+	@extend .popular-courses
+	padding-bottom: 120px
+	&-textcontent
+		@extend .popular-courses-textcontent
+	&-title
+		@extend .popular-courses-title
+	&-desc
+		@extend .popular-courses-desc
+.information
+	@extend .features
+	&-item
+		@extend .features-item
+	&-icon
+		@extend .features-icon
+		display: block
+		width: 75px
+		height: 75px
+		line-height: 75px
+		text-align: center
+		background-color: $accentColor
+		border-radius: 50%
+		&:hover
+			background-color: $hoverColor
+	&-content
+		margin-top: 25px
+	&-title
+		@extend .features-title
+	&-desc
+		@extend .features-desc
+.map
+	iframe
+		width: 100%
+		display: block
+.send-message
+	padding: 125px 0 170px 0
+	&-textcontent
+		@extend .popular-courses-textcontent
+	&-title
+		@extend .popular-courses-title
+	&-desc
+		@extend .popular-courses-desc
+.contact
+	&-form
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&-field
+		input,
+		textarea
+			padding: 14px
+			border: none
+			resize: none
+			width: 100%
+			border-bottom: 1px solid #e1e1e1
+			&:focus
+				outline: none
+		textarea
+			height: 125px
+		&-small
+			width: 31.623931%
+			margin-bottom: 30px
+		&-big
+			width: 100%
+			text-align: center
+			button
+				margin-top: 45px
+/*----courses.html----*/
+#courses
+	.breadcrumbs
+		background: url(../img/courses_bg.jpg) top center no-repeat
+	.courses
+		padding-bottom: 130px
+.courses-nav
+	padding: 27px 0
+	margin-bottom: 100px
+	background-color: #fafafa
+	&-panel
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&-form
+		display: flex
+		align-items: center
+	&-count-label
+		color: $textColor
+	&-form
+		&-field
+			position: relative
+			width: 270px
+			height: 40px
+			input,
+			select
+				width: 100%
+				height: 100%
+				padding: 0 20px
+				background-color: transparent
+				border: 1px solid #e1e1e1
+				color: $textColor
+			select
+				appearance: none
+				&:focus
+					outline: none
+			&.search-field
+				margin-right: 20px
+				button
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					width: 40px
+					background-color: $accentColor
+					color: $white
+					border: none
+					cursor: pointer
+.courses
+	&-main
+		@extend .post
+		align-items: flex-start
+		.page-sidebar
+			margin-top: 117px
+	&-list
+		@extend .post-main
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.courses-item
+			width: 31.03448275%
+			margin-bottom: 40px
+	&-categories
+		width: 100%
+		margin-bottom: 75px
+		text-align: center
+	&-tabs
+		display: inline-block
+	&-tab
+		display: inline-block
+		padding: 0 22px
+		margin-left: -4px
+		line-height: 42px
+		text-align: center
+		background-color: #fafafa
+		font-weight: $semiBold
+		transition: all .2s
+		a
+			display: block
+			color: $titleColor
+			transition: all .2s
+		&:hover,
+		&.active
+			background-color: $accentColor
+			a
+				color: $white
+	.pagination
+		margin-top: 30px
+/*----courses_open.html----*/
+#single-courses
+	.breadcrumbs
+		background: url(../img/courses_bg.jpg) top center no-repeat
+	.preview-course
+		padding: 140px 0
+.course
+	@extend .courses-main
+	&-thumbnail
+		img
+			max-width: 100%
+			height: auto
+	.page-sidebar
+		margin-top: 0
+	&-single
+		@extend .courses-list
+		display: block
+	&-title
+		position: relative
+		margin-bottom: 45px
+		display: inline-block
+		font-size: $fontSizePostTitle
+		color: $titleColor
+		&-label
+			position: absolute
+			top: 50%
+			right: -70px
+			transform: translateY(-50%)
+			padding: 0 15px
+			text-align: center
+			font-size: 12px
+			font-weight: $regular
+			color: $white
+			border-radius: 40px
+			line-height: 22px
+			background-color: $accentColor
+	&-instructor
+		@extend .event-click-org
+		margin-bottom: 0
+		&-info
+			@extend .event-click-org-info
+			padding-right: 60px
+			border-right: 1px solid #f3f3f3
+		&-thumb
+			max-width: 64px
+			overflow: hidden
+			border-radius: 50%
+			border: 1px solid #e1e1e1
+			img
+				max-width: 100%
+				height: auto
+		&-name
+			@extend .event-click-org-name
+			display: block
+			font-weight: $semiBold
+			color: $titleColor
+		&-job
+			display: block
+			font-size: 13px
+			color: $accentColor
+	&-meta
+		display: flex
+		align-items: center
+		margin-bottom: 63px
+	&-categorie
+		padding: 0 68px 0 22px
+		border-right: 1px solid #f3f3f3
+		span
+			display: block
+			font-weight: $semiBold
+			font-size: 14px
+			color: $titleColor
+			&.value
+				font-weight: $regular
+				font-size: 13px
+				color: #bcbcbc
+	&-reviews
+		@extend .course-categorie
+		&-stars
+			li
+				display: inline-block
+				color: $accentColor
+	&-btn
+		display: inline-block
+		margin-left: 110px
+	&-tabs-nav
+		margin-top: 40px
+		margin-bottom: 30px
+		background-color: #fafafa
+	&-tab-nav
+		display: inline-block
+		margin-left: -4px
+		&:first-child
+			margin-left: 0
+		a
+			display: block
+			padding: 20px
+			font-weight: $semiBold
+			color: $textColor
+		&.active,
+		&:hover
+			background-color: $accentColor
+			a
+				color: $white
+	&-tab-panel
+		height: 0;
+		overflow: hidden
+		opacity: 0
+		transition: opacity .4s
+		&.active
+			opacity: 1
+			height: auto	
+	&-description
+		p
+			margin-bottom: 32px
+		h4
+			margin-bottom: 17px
+		&-list
+			display: inline-block
+			margin-right: 50px
+			&:last-child
+				margin-right: 0
+			li
+				margin-bottom: 10px
+				color: $textColor
+				i
+					margin-right: 10px
+					color: $accentColor
+	&-about
+		padding: 55px 25px
+		margin-bottom: 45px
+		text-align: center
+		background-color: #fafafa
+		.btn-default
+			width: 100%
+			margin-top: 53px
+			font-weight: $semiBold
+		&-label
+			font-weight: $semiBold
+			color: $titleColor
+		&-value
+			font-weight: $semiBold
+			font-size: 13px
+			color: $textColor
+		&-list
+			li
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding: 13px 0
+				border-bottom: 1px solid #e1e1e1
+.instructors
+	&-info
+		@extend .post-author-info
+		margin-top: 0
+		margin-bottom: 30px
+		padding-top: 0
+		padding-bottom: 30px
+		border-top: none
+		border-bottom: 1px solid #e1e1e1
+	&-photo
+		@extend .post-author-photo
+	&-details
+		@extend .post-author-details
+	&-title
+		@extend .post-author-title
+	&-job
+		@extend .post-author-job
+.program-group
+	margin-bottom: 60px
+	&-head
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 20px 30px
+		background-color: #fafafa
+	&-title
+		font-size: 16px
+	&-count
+		font-size: 16px
+		font-weight: $bold
+		color: $hoverColor
+.program-lesson
+	padding: 15px 20px
+	border-bottom: 1px solid #f4f4f4
+.lesson
+	&-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&-title
+		color: $textColor
+		i
+			margin-right: 10px
+			color: $accentColor
+	&-label
+		display: inline-block
+		margin: 0 15px
+		padding: 2px 7px
+		background-color: $hoverColor
+		color: $white
+	&-duration
+		color: $textColor
+.reviews
+	&-title
+		font-size: 16px
+		margin-bottom: 20px
+	&-stars
+		li
+			display: inline-block
+			a
+				font-size: 18px
+				color: $hoverColor
+.course-rating
+	display: inline-block
+	&-overall
+		width: 208px
+		height: 208px
+		padding: 20px 10px
+		text-align: center
+		border: 1px solid #e1e1e1
+	&-value
+		display: block
+		font-size: 64px
+		line-height: normal
+		font-weight: $bold
+		color: $accentColor
+	&-count
+		display: block
+		margin-top: 15px
+		font-weight: $semiBold
+		color: $titleColor
+.course-skill
+	display: inline-block
+	margin-left: 35px
+	padding: 30px 40px
+	vertical-align: top
+	border: 1px solid #e1e1e1
+	&-item
+		margin-bottom: 13px
+		&:last-child
+			margin-bottom: 0
+	&-label
+		font-weight: $bold
+		color: $titleColor
+	&-progress
+		position: relative
+		display: inline-block
+		width: 180px
+		height: 10px
+		margin: 0 10px
+		background-color: #efefef
+		&-bar
+			position: absolute
+			top: 0
+			width: 0
+			height: 100%
+	&-count
+		font-weight: $bold
+		color: $textColor
+/*----404.html----*/
+#not-found
+	position: relative
+	.header
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: transparent
+		z-index: 10
+		#anmain-menu
+			background-color: transparent
+		.anmenu-link
+			color: $white
+		.nav-toogle-btn
+			color: $white
+	.breadcrumbs
+		padding: 285px 0
+		height: 100vh
+		background: url(../img/404_bg.jpg) center center no-repeat
+		background-size: cover
+		&:before
+			background-color: $accentColor
+			opacity: .9
+		&-title
+			h2
+				font-size: 172px
+				line-height: normal
+			span
+				font-size: 42px
+				color: $white
+				opacity: .4
