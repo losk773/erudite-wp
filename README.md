@@ -1,4 +1,3 @@
-# erudite-wp
 # HTML Template Website for Wordpress
 
 [Демо сайта](https://losk773.github.io/erudite-wp/)
