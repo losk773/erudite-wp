@@ -1,6 +1,6 @@
 # HTML Template Website for Wordpress
 
-[Демо сайта](https://losk773.github.io/erudite-wp/app/)
+[Демо сайта](https://losk773.github.io/erudite-wp/dist/)
 
 При разработке данного шаблона я использовал следующие технологии:
 1. HTML5
